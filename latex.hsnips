@@ -322,7 +322,7 @@ snippet `\b(?<!\\)(?<!\\mathrm\{)(lhs|rhs|imp|imb|uuto|ddto|ssb|ssp|sbn|stm|app|
 	"codim":"\\CoDim",
 	//"":"\\",
 }
-rv = `${trans[m[1]]} ` ``
+rv = `${trans[m[1]]}` ``
 endsnippet
 
 # xto -> \xrightarrow{}
