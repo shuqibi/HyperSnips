@@ -514,10 +514,11 @@ endsnippet
 #				  Misc				   |
 #--------------------------------------
 
-snippet `\b(?<!\\)(?<!\\mathrm\{)(tit|tbf)` " [HS] textit textbf" A
+snippet `\b(?<!\\)(?<!\\mathrm\{)(tit|tbf|txt)` " [HS] textit textbf text" A
 `` trans = {
 	"tit": "\\textit",
 	"tbf": "\\textbf",
+	"txt": "\\text",
 }
 rv = `${trans[m[1]]}{${snip.tabstop(1)}} ${snip.tabstop(2)}` ``
 endsnippet
