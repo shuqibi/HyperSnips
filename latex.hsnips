@@ -371,16 +371,16 @@ snippet __ " [HS] Subscript" iA
 _{$1} $0
 endsnippet
 
-# xsq -> x^2
-context math(context)
-snippet sq " [HS] Square" A
-^2
-endsnippet
+# # xsq -> x^2
+# context math(context)
+# snippet sq " [HS] Square" A
+# ^2
+# endsnippet
 
-context math(context)
-snippet cb " [HS] Cube" A
-^3
-endsnippet
+# context math(context)
+# snippet cb " [HS] Cube" A
+# ^3
+# endsnippet
 
 # x inv -> x^{-1}
 context math(context)
