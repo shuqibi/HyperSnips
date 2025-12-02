@@ -372,6 +372,9 @@ _{$1} $0
 endsnippet
 
 # xsq -> x^2
+=======
+# # xsq -> x^2
+>>>>>>> origin/main
 # context math(context)
 # snippet sq " [HS] Square" A
 # ^2
