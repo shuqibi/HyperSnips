@@ -371,6 +371,7 @@ snippet __ " [HS] Subscript" iA
 _{$1} $0
 endsnippet
 
+<<<<<<< HEAD
 # xsq -> x^2
 =======
 # # xsq -> x^2
