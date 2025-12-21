@@ -300,7 +300,7 @@ endsnippet
 
 # imp ->  \implies
 context math(context)
-snippet `\b(?<!\\)(?<!\\mathrm\{)(lhs|rhs|imp|imb|uuto|ddto|ssb|ssp|sbn|stm|app|oo|mpt|ee|fa|xx|oxx|o\+|opx|dom|codom|tr|codim|Div|lra|Lra)` " [HS] Abbreviations for Commands" A
+snippet `\b(?<!\\)(?<!\\mathrm\{)(lhs|rhs|imp|imb|uuto|ddto|ssb|ssp|sbn|stm|app|oo|mpt|ee|fa|xx|oxx|o\+|opx|dom|codom|tr|codim|Div|lra|Lra|pdt)` " [HS] Abbreviations for Commands" A
 `` trans = {
 	"lhs":"\\LHS",
 	"rhs":"\\RHS",
@@ -326,6 +326,7 @@ snippet `\b(?<!\\)(?<!\\mathrm\{)(lhs|rhs|imp|imb|uuto|ddto|ssb|ssp|sbn|stm|app|
 	"codom":"\\CoDom",
 	"tr":"\\Tr",
 	"codim":"\\CoDim",
+	"pdt":"\\partial",
 	//"":"\\",
 }
 rv = `${trans[m[1]]}` ``
