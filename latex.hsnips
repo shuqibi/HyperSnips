@@ -23,37 +23,19 @@
 
 # running "Developer: Inspect Editor Tokens and Scopes" yourself in a tex code to help you understand math context.
 
-global
-// old math context definition
-// function math(context) {
-    // return context.scopes.some(s => s.startsWith("support.class.math.block.environment"))
-	// && context.scopes.some(s => s.startsWith("meta.math.block.latex"))
-	// // comment out below if you would like a more loose math context
-	// && ! context.scopes.some(s => s.startsWith("punctuation.definition.string.begin.latex"))
-	// // uncomment below for a more strict math context
-	// && ! context.scopes.some(s => s.startsWith("punctuation.definition.string.end.latex"))
-	// && ! context.scopes.some(s => s.startsWith("comment"));
-// }
-
-// new math context: https://github.com/draivin/hsnips/issues/203#issuecomment-2771621953
-function math(context) {
-            return context.scopes.some(s => s.includes("math")) && !context.scopes.some(s => s.includes("text.normal")) && !context.scopes.some(s => s.includes("definition.label"));
-        }
-endglobal
-
-# the definition for math(context) by Hsnips extension
-# 
-# global
-# function math(context) {
-#     return context.scopes.some(s => s.startsWith("meta.math"));
-# }
-# endglobal
 
 global
-function text(context) {
-    return !context.scopes.some(s => s.startsWith("meta.math") || s.startsWith("meta.embedded") || s.startsWith("source"));
+
+function list(context) {
+    return context.scopes.some(s => s === "meta.function.environment.list.latex");
 }
+
+function math(context) {
+    return context.scopes.some(s => s === "support.class.math.block.environment.latex");
+}
+
 endglobal
+
 
 #-------------------------------------- 
 #			  Environment			   |
