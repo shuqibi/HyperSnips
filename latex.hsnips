@@ -282,7 +282,7 @@ endsnippet
 
 # imp ->  \implies  (abbreiviation, no bracket argument)
 context math(context)
-snippet `\b(?<!\\)(?<!\\mathrm\{)(lhs|rhs|imp|imb|uuto|ddto|ssb|ssp|sbn|stm|app|oo|mpt|ee|fa|xx|oxx|o\+|opx|dom|codom|tr|codim|Div|lra|Lra|pdt)` " [HS] Abbreviations for Commands" A
+snippet `\b(?<!\\)(?<!\\mathrm\{)(lhs|rhs|imp|imb|uuto|ddto|ssb|ssp|sbn|stm|app|oo|mpt|ee|fa|xx|oxx|o\+|opx|dom|codom|tr|codim|Div|lra|Lra|pdt|tde)` " [HS] Abbreviations for Commands" A
 `` trans = {
 	"lhs":"\\LHS",
 	"rhs":"\\RHS",
@@ -309,6 +309,7 @@ snippet `\b(?<!\\)(?<!\\mathrm\{)(lhs|rhs|imp|imb|uuto|ddto|ssb|ssp|sbn|stm|app|
 	"tr":"\\Tr",
 	"codim":"\\CoDim",
 	"pdt":"\\partial",
+	"tde": "\\tilde",
 	//"":"\\",
 }
 rv = `${trans[m[1]]}` ``
@@ -316,14 +317,13 @@ endsnippet
 
 # xto -> \xrightarrow{} (abbreiviation, with bracket argument)
 context math(context)
-snippet `\b(?<!\\)(?<!\\mathrm\{)(xto|xot|ovl|mrm|eqby|tde)` " [HS] Abbreviations for Commands with argument" A
+snippet `\b(?<!\\)(?<!\\mathrm\{)(xto|xot|ovl|mrm|eqby)` " [HS] Abbreviations for Commands with argument" A
 `` trans = {
 	"xto": "\\xrightarrow",
 	"xot": "\\xleftarrow",
 	"ovl": "\\overline",
 	"mrm": "\\mathrm",
 	"eqby": "\\equalby",
-	"tde": "\\tilde",
 }
 rv = `${trans[m[1]]}{${snip.tabstop(1)}} ${snip.tabstop(2)}` ``
 endsnippet
